@@ -1,0 +1,54 @@
+### OS GENERATED FILES ###
+.DS_Store
+ehthumbs.db
+Icon
+Thumbs.db
+
+### Maven generated files
+target/
+
+### MERGED FILES ###
+*.BASE
+*.LOCAL
+*.REMOTE
+*.orig
+
+### JAVA GENERATED FILES ###
+*.class
+*.number
+
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.eml
+
+### Eclipse ###
+RemoteSystemsTempFiles/
+.metadata
+.classpath
+.project
+.settings
+/bin/
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+## PYTHON
+__pycache__

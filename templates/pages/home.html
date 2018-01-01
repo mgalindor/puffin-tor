@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" href="{{ url_for('static',filename='images/puffin-tor2.ico') }}">
+		<script src="{{ url_for('static',filename='js/angular.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/Chart.bundle.min.js') }}"></script>
+		<title>Puffin-tor</title>
+	</head>
+	<body>
+		<script type=text/javascript>
+		$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+		</script>
+		
+		<nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top bg-primary">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarColor01">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="text" placeholder="Search">
+					<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="page-header" id="banner">
+				<div class="row">
+					<div class="col-lg-8 col-md-7 col-sm-6">
+						<h1>Flatly  <i class="fa fa-camera-retro"></i> fa-camera-retro </h1>
+						<p class="lead">Flat and modern</p>
+					</div>
+					<div class="col-lg-4 col-md-5 col-sm-6">
+						<div class="sponsor">
+							<a href="#">
+								<img src="{{ url_for('static',filename='images/puffin-tor.jpg') }}">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="jumbotron">
+				<h1 class="display-3">Hello, world!</h1>
+				<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+				<hr class="my-4">
+				<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+				<p class="lead">
+					<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+				</p>
+			</div>
+			
+			<div class="bs-docs-section">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="page-header">
+							<h1 id="tables">Information</h1>
+						</div>
+						<div class="bs-component">
+							<h2>Example body text</h2>
+							<p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+							<p><small>This line of text is meant to be treated as fine print.</small></p>
+							<p>The following is <strong>rendered as bold text</strong>.</p>
+							<p>The following is <em>rendered as italicized text</em>.</p>
+							<p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bs-docs-section">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="page-header">
+							<h1 id="tables">Tables</h1>
+						</div>
+						<div class="bs-component">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th scope="col">Type</th>
+										<th scope="col">Column heading</th>
+										<th scope="col">Column heading</th>
+										<th scope="col">Column heading</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="table-active">
+										<th scope="row">Active</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr>
+										<th scope="row">Default</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr class="table-primary">
+										<th scope="row">Primary</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr class="table-secondary">
+										<th scope="row">Secondary</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr class="table-success">
+										<th scope="row">Success</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr class="table-danger">
+										<th scope="row">Danger</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr class="table-warning">
+										<th scope="row">Warning</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr class="table-info">
+										<th scope="row">Info</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr class="table-light">
+										<th scope="row">Light</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr class="table-dark">
+										<th scope="row">Dark</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+								</tbody>
+							</table>
+							<div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div><!-- /example -->
+						</div>
+					</div>
+				</div>
+				<div class="bs-docs-section">
+					<div class="row">
+						<div class="col-lg-12">
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top bg-primary">
+				<a class="navbar-brand" href="#">Navbar</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarColor01">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Features</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Pricing</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About</a>
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="text" placeholder="Search">
+						<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
+			
+		</body>
+	</html>
