@@ -3,15 +3,21 @@
 	<head>
 		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/bootstrap.min.css') }}">
 		<link rel="icon" href="{{ url_for('static',filename='images/puffin-tor2.ico') }}">
-		<script src="{{ url_for('static',filename='js/angular/angular.min.js') }}"></script>
-		<script src="{{ url_for('static',filename='js/chart/chart.bundle.min.js') }}"></script>
-		<script src="{{ url_for('static',filename='js/fontawesome/js/fontawesome-all.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/infra/jquery/core.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/infra/jquery/jquery.validate.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/infra/jquery/additional-methods.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/infra/jquery/localization/messages_es.js') }}"></script>
+
+		<script src="{{ url_for('static',filename='js/infra/angular/angular.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/infra/chart/chart.bundle.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/infra/fontawesome/js/fontawesome-all.js') }}"></script>
 		<title>Puffin-tor</title>
 	</head>
 	<body>
 		<script type=text/javascript>
 		$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 		</script>
+		<script src="{{ url_for('static',filename='js/modules/home/home.js') }}"></script>
 
 		<nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top bg-primary">
 			<a class="navbar-brand" href="#">Navbar</a>
@@ -40,11 +46,15 @@
 			</div>
 		</nav>
 		<div class="container">
+			<br>
+			<br>
 			<div class="page-header" id="banner">
 				<div class="row">
 					<div class="col-lg-8 col-md-7 col-sm-6">
-						<h1>Flatly  <i class="fa fa-camera-retro"></i> fa-camera-retro </h1>
-						<p class="lead">Flat and modern</p>
+						<h1>Page header  <i class="fas fa-leaf"></i>  </h1>
+						<p class="lead">Pragraph </p>
+						<br>
+						And simple content
 					</div>
 					<div class="col-lg-4 col-md-5 col-sm-6">
 						<div class="sponsor">
@@ -176,32 +186,13 @@
 						</div>
 					</div>
 				</div>
+
+				<h1>Graph example</h1>
+				<canvas id="myChart" width="400" height="400"></canvas>
 			</div>
+
 			<nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top bg-primary">
-				<a class="navbar-brand" href="#">Navbar</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
-				<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarColor01">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active">
-							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Features</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Pricing</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">About</a>
-						</li>
-					</ul>
-					<form class="form-inline my-2 my-lg-0">
-						<input class="form-control mr-sm-2" type="text" placeholder="Search">
-						<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-					</form>
-				</div>
+				<a class="navbar-brand" href="#">Footer</a>
 			</nav>
 
 		</body>

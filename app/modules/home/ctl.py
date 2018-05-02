@@ -9,7 +9,7 @@ home = Blueprint('monitor', __name__ )
 @home.route('/')
 def show():
     #try:
-        return render_template('pages/home.html' )
+        return render_template('modules/home/home.html' )
     #except TemplateNotFound:
         #abort(404)
 
