@@ -2,19 +2,22 @@ from flask import Blueprint, render_template, abort
 from jinja2 import TemplateNotFound
 import json
 
-monitor = Blueprint('monitor', __name__,
-                        template_folder='templates')
+home = Blueprint('monitor', __name__ )
 
 #@monitor.route('/', defaults={'page': 'home'})
 #@monitor.route('/<page>')
-@monitor.route('/')
+@home.route('/')
 def show():
-    try:
+    #try:
         return render_template('pages/home.html' )
-    except TemplateNotFound:
-        abort(404)
+    #except TemplateNotFound:
+        #abort(404)
 
-@monitor.route('/sites')
+@home.route('/test')
+def test():
+        return "hola"
+
+@home.route('/sites')
 def sites():
 	data = json.load(open('sites.json'))
 	return data

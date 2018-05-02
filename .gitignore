@@ -1,54 +1,103 @@
-### OS GENERATED FILES ###
-.DS_Store
-ehthumbs.db
-Icon
-Thumbs.db
+# Created by .ignore support plugin (hsz.mobi)
+### Python template
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.idea
+tmp
 
-### Maven generated files
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
 target/
 
-### MERGED FILES ###
-*.BASE
-*.LOCAL
-*.REMOTE
-*.orig
+# Jupyter Notebook
+.ipynb_checkpoints
 
-### JAVA GENERATED FILES ###
-*.class
-*.number
+# pyenv
+.python-version
 
-!.mvn/wrapper/maven-wrapper.jar
+# celery beat schedule file
+celerybeat-schedule
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
+# SageMath parsed files
+*.sage.py
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-*.eml
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
 
-### Eclipse ###
-RemoteSystemsTempFiles/
-.metadata
-.classpath
-.project
-.settings
-/bin/
+# Spyder project settings
+.spyderproject
+.spyproject
 
-### NetBeans ###
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
+# Rope project settings
+.ropeproject
 
-## PYTHON
-__pycache__
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
